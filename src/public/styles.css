@@ -1,0 +1,275 @@
+/* Custom styles */
+.quality-value {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* Form validation styles */
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+    border-color: #198754;
+}
+
+/* Preview image container */
+#previewImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .display-5 {
+        font-size: calc(1.2rem + 1.5vw);
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Smooth transitions */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Add these new styles */
+.screenshot-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #6c757d #f8f9fa;
+}
+
+.screenshot-wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.screenshot-image {
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform-origin: center center;
+    transition: transform 0.1s ease-out;
+}
+
+.lightbox-container .screenshot-image {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+/* Custom scrollbar styling */
+.screenshot-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.screenshot-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.screenshot-container::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 4px;
+}
+
+.screenshot-container::-webkit-scrollbar-thumb:hover {
+    background: #495057;
+}
+
+/* Smooth scrolling */
+.screenshot-container {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .screenshot-container {
+        height: 400px;
+    }
+}
+
+/* Lightbox styles */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 2% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.lightbox-close {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #6c757d;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.lightbox-close:hover {
+    color: #000;
+}
+
+.lightbox-container {
+    height: calc(100% - 40px);
+    margin-top: 20px;
+}
+
+/* Animation for lightbox */
+@keyframes lightboxIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-content {
+    animation: lightboxIn 0.3s ease-out;
+}
+
+/* Adjust scrollbar for lightbox */
+.lightbox-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.lightbox-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.lightbox-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Prevent body scroll when lightbox is open */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Smooth zoom transitions */
+.screenshot-container {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Add these responsive styles */
+@media (max-width: 640px) {
+    .prose {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .mobile-menu-button {
+        display: block;
+    }
+}
+
+/* Animation for mobile menu */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+@media (min-width: 640px) {
+    .responsive-container {
+        padding: 2rem;
+    }
+} 
