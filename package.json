@@ -1,0 +1,27 @@
+{
+  "name": "webpage-screenshot-tool",
+  "version": "1.0.0",
+  "description": "Professional webpage screenshot generation tool",
+  "main": "src/app.js",
+  "scripts": {
+    "generate-icons": "node src/scripts/generate-icons.js",
+    "start": "npm run generate-icons && node src/app.js",
+    "dev": "npm run generate-icons && nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^21.0.0",
+    "express-rate-limit": "^7.0.0",
+    "express-validator": "^7.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.32.6",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,3 @@
+mkdir webpage-screenshot-tool
+cd webpage-screenshot-tool
+npm init -y 
